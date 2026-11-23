@@ -1,18 +1,27 @@
-## Getting Started
+# SIDEDAII — Portafolio de proyectos (EPN)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Arquitectura MVC en Java Swing.
 
-## Folder Structure
+```
+SIDEDAII/
+├── logo.png
+└── src/
+    ├── app/          Main.java
+    ├── modelo/       Carpeta, Ejercicio, Portafolio, RepositorioPortafolio
+    ├── vista/        VentanaPrincipal, PanelLogin, PanelDashboard, TarjetaCarpeta,
+    │                 FilaEjercicio, DialogoEjercicio, Boton, LogoView, Ancho, Estilo,
+    │                 VistaListener (interfaz de eventos)
+    └── controlador/  PortafolioControlador
+```
 
-The workspace contains two folders by default, where:
+## Compilar y ejecutar (desde esta carpeta)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Linux / macOS:
+    javac -d out $(find src -name "*.java")
+    java -cp out app.Main
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Windows (PowerShell):
+    javac -d out (Get-ChildItem -Recurse src -Filter *.java).FullName
+    java -cp out app.Main
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Los datos se guardan en `sidedaii.dat` (se crea al ejecutar).
